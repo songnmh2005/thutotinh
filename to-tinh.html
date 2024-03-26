@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            font-size: 36px;
+            cursor: pointer;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: white;
+        }
+        p {
+            font-size: 64px;
+        }
+        span {
+            font-size: 48px;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <p>Chị có yêu Anh không Lê Thị Minh Quỳnh</h1>
+        <br />
+        <span id="note">Không được</span>
+    <div>
+        <button onclick="alert('Tối anh đón')" id="dong-y" style="background-color: green;">Đồng ý</button>
+        <button onclick="handleTuChoiClick()" id="tu-choi" style="background-color: red;">Từ chối</button>
+    </div>
+
+    <script>
+        let kichCoButton = 36
+        let postion = 0
+        const notes = [ "Yêu em hong?", "Chị yêu em á", "Cái gì yêu em nhiều lắm á", "Mặc váy vào đi tối anh qua đón", "YÊU BẠN" ] 
+        function handleTuChoiClick () {
+            const dongY = document.getElementById('dong-y')
+
+            kichCoButton = kichCoButton + 20
+            dongY.style.fontSize =  kichCoButton + 'px'
+
+            const note = document.getElementById('note')
+
+             postion = postion + 1
+             if (postion > notes.length - 1) {
+                postion = 0
+             } else {
+                postion = postion
+             }
+            note.innerText = notes[postion]
+
+        
+
+            
+
+
+        }
+
+    </script>
+</body>
+</html>
